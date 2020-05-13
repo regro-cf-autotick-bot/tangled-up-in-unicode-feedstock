@@ -3,7 +3,7 @@ About tangled-up-in-unicode
 
 Home: https://github.com/dylan-profiler/tangled-up-in-unicode
 
-Package license: BSD
+Package license: BSD-4-Clause
 
 Feedstock license: BSD 3-Clause
 
