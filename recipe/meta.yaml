@@ -28,7 +28,7 @@ test:
 about:
   home: https://github.com/dylan-profiler/tangled-up-in-unicode
   summary: "Access to the Unicode Character Database (UCD)"
-  license: BSD
+  license: BSD-4-Clause
   license_file: LICENSE
   description: |
     This module provides access to character properties for all Unicode 
