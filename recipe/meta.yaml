@@ -1,5 +1,5 @@
 {% set name = "tangled-up-in-unicode" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: f463a59e9beb612e7cf801e1721f4eeda9bce25496b0232f30bc3ef5bc61f5ef
+  sha256: ff9623723335e727757671d2459d2cf2c742cfd6295c16602d09a69bffa76c57
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python 
+    - python >=3.5
     - pip
   run:
-    - python 
+    - python >=3.5
 
 test:
   imports:
@@ -27,7 +27,7 @@ test:
 
 about:
   home: https://github.com/dylan-profiler/tangled-up-in-unicode
-  summary: "Access to the Unicode Character Database (UCD)"
+  summary: Access to the Unicode Character Database (UCD)
   license: BSD-4-Clause
   license_file: LICENSE
   description: |
