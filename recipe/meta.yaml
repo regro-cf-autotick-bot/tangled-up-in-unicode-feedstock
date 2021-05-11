@@ -1,5 +1,5 @@
 {% set name = "tangled-up-in-unicode" %}
-{% set version = "0.0.7" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: ff9623723335e727757671d2459d2cf2c742cfd6295c16602d09a69bffa76c57
+  sha256: d07ffa62a4d9e9e0a92582f869ac3a2859456f5c9241580c7a5d9fcf2e6e6315
 
 build:
   noarch: python
