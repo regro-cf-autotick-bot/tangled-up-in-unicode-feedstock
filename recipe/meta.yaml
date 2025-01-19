@@ -6,22 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace("-", "_") }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace("-", "_") }}-{{ version }}.tar.gz
   sha256: de56dbaf32de1b8c65621f97b06b7de21cba18c8e61f3988a426ffe3c40fed36
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - tangled_up_in_unicode
 
